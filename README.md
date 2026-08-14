@@ -2,6 +2,9 @@
 
 **A minimal desktop companion robotics platform.**
 
+<img width="763" height="870" alt="KakaoTalk_20260815_001912404" src="https://github.com/user-attachments/assets/c1ed3716-c423-47f7-a8aa-0f5b8f87f93d" />
+
+
 BEN is a small desktop robot built around a simple idea: how far can a desktop companion be simplified while still remaining expressive?
 
 It keeps only the essentials:
