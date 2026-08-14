@@ -26,9 +26,8 @@ BEN is built around an **ESP32-C3 SuperMini** and a custom flexible PCB (FPCB).
 | Degrees of freedom | 2 DOF                            |
 | Actuators          | 2 × DM-S0020 2g micro servo      |
 | Input              | 1 × Kailh Choc V2 mechanical switch |
-| Eyes               | 2 × brightness-controllable LEDs |
-| Heart              | 1 × brightness-controllable LED  |
-| Power              | 5 V USB                          |
+| LEDs | 3 × LUXEON 3535L LED3 × LUXEON 3535L LED |
+| Power              | 5 V USB C                         |
 | PCB                | Custom FPCB                      |
 | Mechanical parts   | 3D printed                       |
 
