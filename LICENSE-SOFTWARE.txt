@@ -1,7 +1,4 @@
 The MIT License
-Version N/A
-SPDX short identifier: MIT
-
 
 Copyright (c) 2026 Minjae Kim
 
