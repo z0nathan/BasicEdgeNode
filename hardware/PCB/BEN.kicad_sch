@@ -1,0 +1,2467 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "5959150c-0b34-4925-92cd-c6f86deba942")
+	(paper "A4")
+	(lib_symbols
+		(symbol "PCBsch-eagle-import:ESP32-C3_SUPERMINI_TH"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -12.7 16.002 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -12.7 -20.32 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "PCBsch:MODULE_ESP32-C3_SUPERMINI_TH"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "https://pricing.snapeda.com/parts/ESP32-C3%20SuperMini_TH/Espressif%20Systems/view-part?ref=eda Check availability"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "ESP32-C3_SUPERMINI_TH_1_0"
+				(polyline
+					(pts
+						(xy -12.7 15.24) (xy -12.7 -17.78)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -12.7 -17.78) (xy 12.7 -17.78)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 15.24) (xy -12.7 15.24)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 12.7 -17.78) (xy 12.7 15.24)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 5.08 0)
+					(length 5.08)
+					(name "GPIO0"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "0"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 2.54 0)
+					(length 5.08)
+					(name "GPIO1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 0 0)
+					(length 5.08)
+					(name "GPIO2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -2.54 0)
+					(length 5.08)
+					(name "GPIO3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -7.62 0)
+					(length 5.08)
+					(name "GPIO5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 -10.16 0)
+					(length 5.08)
+					(name "GPIO6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 12.7 180)
+					(length 5.08)
+					(name "5V"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "5V"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 10.16 180)
+					(length 5.08)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3.3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 5.08 180)
+					(length 5.08)
+					(name "GPIO7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 2.54 180)
+					(length 5.08)
+					(name "GPIO8"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 0 180)
+					(length 5.08)
+					(name "GPIO9"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -2.54 180)
+					(length 5.08)
+					(name "GPIO10"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -5.08 180)
+					(length 5.08)
+					(name "GPIO20"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 -7.62 180)
+					(length 5.08)
+					(name "GPIO21"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 17.78 -15.24 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "G"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCBsch-eagle-import:L135-A589003500000"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at -3.0988 4.4958 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" ""
+				(at -3.556 -3.302 0)
+				(effects
+					(font
+						(size 1.27 1.0795)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" "PCBsch:LED_L135-A589003500000"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L135-A589003500000_1_0"
+				(polyline
+					(pts
+						(xy -2.54 1.524) (xy -2.54 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -5.08 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.54 -1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.524) (xy 0 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.1176 3.683) (xy -0.2286 4.1656)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.9398 3.6068) (xy -0.7112 3.7592)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5588 3.2004) (xy -1.1176 3.683)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5588 3.2004) (xy -0.5334 3.937)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 3.937) (xy -0.6604 3.937)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.2286 4.1656) (xy -2.0066 2.1336)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.2286 4.1656) (xy -0.5588 3.2004)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.524) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy -2.54 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.127 3.5814) (xy 1.016 4.064)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.3048 3.5052) (xy 0.5334 3.6576)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.6858 3.0988) (xy 0.127 3.5814)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.6858 3.0988) (xy 0.7112 3.8354)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.7112 3.8354) (xy 0.5842 3.8354)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 4.064) (xy -0.762 2.032)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 4.064) (xy 0.6858 3.0988)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "A"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 5.08)
+					(name "C"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "C"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCBsch-eagle-import:RC0805FR-07220RLRES_RC0805_YAG"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -2.1798 2.0701 0)
+				(effects
+					(font
+						(size 3.48 2.958)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Value" ""
+				(at -2.6131 -5.5499 0)
+				(effects
+					(font
+						(size 3.48 2.958)
+					)
+					(justify left bottom)
+					(hide yes)
+				)
+			)
+			(property "Footprint" "PCBsch:RES_RC0805_YAG"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "RC0805FR-07220RLRES_RC0805_YAG_1_0"
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 3.175 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 1.27) (xy 4.445 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -1.27) (xy 5.715 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.715 1.27) (xy 6.985 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.985 -1.27) (xy 8.255 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 8.255 1.27) (xy 9.525 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.525 -1.27) (xy 10.16 0)
+					)
+					(stroke
+						(width 0.2032)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "PCBsch-eagle-import:SERVOSG90-HDR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" ""
+				(at 1.27 8.128 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Value" ""
+				(at 1.27 -8.128 0)
+				(effects
+					(font
+						(size 1.778 1.5113)
+					)
+					(justify top)
+				)
+			)
+			(property "Footprint" "PCBsch:1X03"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SERVOSG90-HDR_1_0"
+				(polyline
+					(pts
+						(xy -5.08 7.62) (xy 7.62 7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -7.62) (xy -5.08 7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -7.62) (xy 7.62 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 6.3498 -2.0318)
+					(mid 2.763 -1.448)
+					(end 3.81 2.032)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 5.08 0)
+					(radius 1.524)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 6.35 -2.032) (xy 11.43 2.794)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 7.62) (xy 7.62 4.064)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -7.62) (xy 7.62 -0.889)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 9.906 5.08) (xy 3.81 2.032)
+					)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 9.9059 5.0798)
+					(mid 11.6702 4.6052)
+					(end 11.43 2.794)
+					(stroke
+						(width 0.1524)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 5.08 0)
+					(length 2.54)
+					(name "PWR"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "SIG"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -7.62 -5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 152.4 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "13b7cf46-64de-4e4c-ab5e-b40d7f3f1e9f")
+	)
+	(junction
+		(at 147.32 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28b20234-e1f4-426b-95c1-72bead6543c6")
+	)
+	(junction
+		(at 142.24 60.96)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "55334bbf-5fde-425a-8c18-49f279579fea")
+	)
+	(junction
+		(at 182.88 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "938cde66-be01-4d81-8e94-29bfc24a38ba")
+	)
+	(junction
+		(at 157.48 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "de599f18-d524-42c2-81d5-9044b6f47173")
+	)
+	(wire
+		(pts
+			(xy 86.36 116.84) (xy 104.14 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "022a5f79-9758-463b-a71d-8aa6689a5fa4")
+	)
+	(wire
+		(pts
+			(xy 104.14 114.3) (xy 111.76 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "214f40ca-4570-4888-9b62-c8fe92573d72")
+	)
+	(wire
+		(pts
+			(xy 190.5 114.3) (xy 172.72 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2457eea8-bf2d-4c9f-9e43-96f02e46f179")
+	)
+	(wire
+		(pts
+			(xy 147.32 106.68) (xy 182.88 106.68)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "25b57a94-5b75-448b-846a-c8ccf279898c")
+	)
+	(wire
+		(pts
+			(xy 99.06 127) (xy 99.06 175.26)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "28a00e42-65ca-42ba-852e-221f5bcece06")
+	)
+	(wire
+		(pts
+			(xy 187.96 101.6) (xy 190.5 101.6)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "28ba7c95-3a28-4d89-85f7-ce1b1ccb53d3")
+	)
+	(wire
+		(pts
+			(xy 152.4 60.96) (xy 152.4 27.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "2b507b63-3a56-4322-863c-4e262e968204")
+	)
+	(wire
+		(pts
+			(xy 215.9 162.56) (xy 172.72 162.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "32101bdf-4da3-4379-bebf-0a03ddb4b8dd")
+	)
+	(wire
+		(pts
+			(xy 86.36 43.18) (xy 86.36 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3cf07c81-0404-426a-afc1-fb8c9ce2e435")
+	)
+	(wire
+		(pts
+			(xy 99.06 175.26) (xy 167.64 175.26)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "3e471b4f-fc74-4049-966c-b7e335f4fcb9")
+	)
+	(wire
+		(pts
+			(xy 152.4 134.62) (xy 152.4 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "47270b5c-d5dd-4ce1-9c61-520210d53038")
+	)
+	(wire
+		(pts
+			(xy 167.64 121.92) (xy 167.64 96.52)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4d189173-0f0e-4ab1-addb-ed17aa20549d")
+	)
+	(wire
+		(pts
+			(xy 93.98 60.96) (xy 93.98 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "4e32a6ee-b272-47be-9ed4-15823b4554e3")
+	)
+	(wire
+		(pts
+			(xy 111.76 121.92) (xy 93.98 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "51186ab1-d8bc-41ca-92ae-74f9a2fa8ef0")
+	)
+	(wire
+		(pts
+			(xy 78.74 27.94) (xy 78.74 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5b79b064-5215-4880-8204-8bae5686d227")
+	)
+	(wire
+		(pts
+			(xy 114.3 27.94) (xy 121.92 27.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "5d99b470-54a1-437a-b5bf-220441ef94a4")
+	)
+	(wire
+		(pts
+			(xy 172.72 172.72) (xy 175.26 172.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "62ce7d7f-77d8-40db-aac8-677a58d51cd0")
+	)
+	(wire
+		(pts
+			(xy 111.76 124.46) (xy 86.36 124.46)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "676a11ce-da56-4457-b2ab-4b6bded2e927")
+	)
+	(wire
+		(pts
+			(xy 114.3 60.96) (xy 119.38 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "6fc3f307-d6cd-4cd2-b073-035e5f2d70a2")
+	)
+	(wire
+		(pts
+			(xy 147.32 147.32) (xy 147.32 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "75a5d34e-d117-45fe-8567-def2cb16bb9f")
+	)
+	(wire
+		(pts
+			(xy 106.68 119.38) (xy 78.74 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "76d41652-c125-4a6a-af15-12b4775b7789")
+	)
+	(wire
+		(pts
+			(xy 152.4 27.94) (xy 134.62 27.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "77d7c10b-63bf-43b7-bb66-73c3c22a9118")
+	)
+	(wire
+		(pts
+			(xy 142.24 60.96) (xy 142.24 45.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7809cb21-a6c2-40a3-a3cf-9f6541e0f1a3")
+	)
+	(wire
+		(pts
+			(xy 215.9 121.92) (xy 215.9 162.56)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7e260d34-c2f9-42db-9fef-a7290e99d7e0")
+	)
+	(wire
+		(pts
+			(xy 101.6 60.96) (xy 93.98 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7eff9480-4073-4906-8632-4d4b5c19d932")
+	)
+	(wire
+		(pts
+			(xy 111.76 116.84) (xy 106.68 116.84)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "7fa93c75-e36d-4615-ac62-02f84053a36d")
+	)
+	(wire
+		(pts
+			(xy 142.24 45.72) (xy 134.62 45.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "87939728-1c1b-465f-b3af-66602aa4154c")
+	)
+	(wire
+		(pts
+			(xy 147.32 134.62) (xy 172.72 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8ae607b3-8500-4a91-86de-70d10863a1ac")
+	)
+	(wire
+		(pts
+			(xy 147.32 121.92) (xy 167.64 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "8c77f8e9-467d-43d3-9842-1057fdf337d9")
+	)
+	(wire
+		(pts
+			(xy 172.72 114.3) (xy 172.72 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "93bd1b5b-d3a1-48fa-97a1-9af6b28de0aa")
+	)
+	(wire
+		(pts
+			(xy 167.64 96.52) (xy 177.8 96.52)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "981b96f2-efe9-485b-8152-7c630c7e7bc1")
+	)
+	(wire
+		(pts
+			(xy 167.64 175.26) (xy 167.64 180.34)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a2227576-46c5-454d-b891-8620c63a8370")
+	)
+	(wire
+		(pts
+			(xy 182.88 121.92) (xy 215.9 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a2585d81-8e42-49b5-bcd7-66ee6f064068")
+	)
+	(wire
+		(pts
+			(xy 175.26 180.34) (xy 175.26 177.8)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a4f4918e-52f1-4da2-8989-f839d80e4e24")
+	)
+	(wire
+		(pts
+			(xy 86.36 43.18) (xy 101.6 43.18)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "a9e8ad12-4366-467c-9785-ddfa9a246d47")
+	)
+	(wire
+		(pts
+			(xy 195.58 144.78) (xy 157.48 144.78)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "af9d936e-9be4-48fa-8390-a1606553c92e")
+	)
+	(wire
+		(pts
+			(xy 157.48 182.88) (xy 175.26 182.88)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b204173a-13e9-43c1-8325-14d9307619f6")
+	)
+	(wire
+		(pts
+			(xy 106.68 116.84) (xy 106.68 119.38)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b265179e-5431-4a4a-8731-a6af1fc5b938")
+	)
+	(wire
+		(pts
+			(xy 185.42 154.94) (xy 185.42 139.7)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b5d18b5c-c7a9-42be-b259-6923a2157083")
+	)
+	(wire
+		(pts
+			(xy 185.42 139.7) (xy 195.58 139.7)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "b8124361-150c-441c-997f-5a209ad51376")
+	)
+	(wire
+		(pts
+			(xy 101.6 27.94) (xy 78.74 27.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "bda7b5c4-ae72-4681-bbb9-0619e2f6e881")
+	)
+	(wire
+		(pts
+			(xy 111.76 127) (xy 99.06 127)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c3756fb5-e9c9-425f-8947-21e33250009e")
+	)
+	(wire
+		(pts
+			(xy 157.48 144.78) (xy 157.48 147.32)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "c72f7dc9-eae7-4e94-bbf5-a8e9a0b536c4")
+	)
+	(wire
+		(pts
+			(xy 182.88 134.62) (xy 195.58 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ca3bfd64-7084-4097-baaf-bd70ec2e426f")
+	)
+	(wire
+		(pts
+			(xy 190.5 101.6) (xy 190.5 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ccf47905-a7b9-4194-9584-b2efa02688dc")
+	)
+	(wire
+		(pts
+			(xy 101.6 43.18) (xy 101.6 45.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ce80e47e-0303-4358-a5a3-8e874a2a1cc6")
+	)
+	(wire
+		(pts
+			(xy 167.64 180.34) (xy 175.26 180.34)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d22e498b-fa2a-442f-9489-86b021b997bf")
+	)
+	(wire
+		(pts
+			(xy 86.36 154.94) (xy 185.42 154.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d4a39663-f76d-4d81-977c-9292104d7875")
+	)
+	(wire
+		(pts
+			(xy 86.36 124.46) (xy 86.36 154.94)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d5433f9a-8f27-43dd-8b1b-1163a45e919c")
+	)
+	(wire
+		(pts
+			(xy 182.88 106.68) (xy 182.88 121.92)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d57f7923-0234-478e-ba7d-a281612cf0c2")
+	)
+	(wire
+		(pts
+			(xy 182.88 121.92) (xy 182.88 134.62)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d7c23d16-b735-40b5-8f4e-96d219781a38")
+	)
+	(wire
+		(pts
+			(xy 142.24 60.96) (xy 132.08 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "d819e90b-fe6e-441b-a224-a2f1f15da301")
+	)
+	(wire
+		(pts
+			(xy 172.72 162.56) (xy 172.72 172.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e1339b10-57ea-4ccc-b3f6-0f44eb8aa3ec")
+	)
+	(wire
+		(pts
+			(xy 114.3 45.72) (xy 121.92 45.72)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "e8ab167c-e00b-49b9-b8a0-e9ed1802e50b")
+	)
+	(wire
+		(pts
+			(xy 157.48 147.32) (xy 157.48 182.88)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ea5e19b2-6685-4cb7-8784-b3db9ffd25f5")
+	)
+	(wire
+		(pts
+			(xy 157.48 147.32) (xy 147.32 147.32)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "f70646ad-26b2-46d4-9055-4c6e6cc7b95b")
+	)
+	(wire
+		(pts
+			(xy 152.4 60.96) (xy 142.24 60.96)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "fc9c6ffb-9e40-4309-8804-ca7d7acde786")
+	)
+	(wire
+		(pts
+			(xy 104.14 116.84) (xy 104.14 114.3)
+		)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(uuid "ff67432d-82cf-4eb4-b19c-c676d7d2ce4d")
+	)
+	(global_label "3V3"
+		(shape bidirectional)
+		(at 147.32 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "aaf541d7-614b-4547-9106-cdeb1ee4749c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 153.403 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:L135-A589003500000")
+		(at 127 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0875b85a-5831-4bb9-bb37-2d0283802c6a")
+		(property "Reference" "D3"
+			(at 123.9012 56.4642 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "L135-A589003500000"
+			(at 123.444 64.262 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:LED_L135-A589003500000"
+			(at 127 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 127 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "685b4fad-9335-46fa-956a-9b12d01298a2")
+		)
+		(pin "C"
+			(uuid "99618608-eea3-4d13-82f2-1dc2b6e04ec6")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:L135-A589003500000")
+		(at 129.54 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "38e7a971-dfa1-4c16-9cd1-f1e8486bbc72")
+		(property "Reference" "D2"
+			(at 126.4412 41.2242 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "L135-A589003500000"
+			(at 125.984 49.022 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:LED_L135-A589003500000"
+			(at 129.54 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "49d81022-7196-4e44-bdf5-f94009c6bfda")
+		)
+		(pin "C"
+			(uuid "18d2d8d8-77d6-430d-a9e2-1d10463e300c")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:RC0805FR-07220RLRES_RC0805_YAG")
+		(at 101.6 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "517a9362-8489-4588-8353-c70506745110")
+		(property "Reference" "R3"
+			(at 99.4202 58.8899 0)
+			(effects
+				(font
+					(size 3.48 2.958)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "RC0805FR-07220RLRES_RC0805_YAG"
+			(at 98.9869 66.5099 0)
+			(effects
+				(font
+					(size 3.48 2.958)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:RES_RC0805_YAG"
+			(at 101.6 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe19ef2e-c524-4581-b4da-0f031b6719b5")
+		)
+		(pin "2"
+			(uuid "6780d2fb-bdbc-4875-8762-572232d5ab03")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:RC0805FR-07220RLRES_RC0805_YAG")
+		(at 101.6 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "585fcb0f-834b-422e-832a-cba8cb4afb89")
+		(property "Reference" "R2"
+			(at 99.4202 43.6499 0)
+			(effects
+				(font
+					(size 3.48 2.958)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "RC0805FR-07220RLRES_RC0805_YAG"
+			(at 98.9869 51.2699 0)
+			(effects
+				(font
+					(size 3.48 2.958)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:RES_RC0805_YAG"
+			(at 101.6 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c07796f9-1259-4200-a3b7-3be3649ebd04")
+		)
+		(pin "1"
+			(uuid "284f7943-3af7-4d94-b6f1-c4d102154997")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:RC0805FR-07220RLRES_RC0805_YAG")
+		(at 101.6 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b98dc6f9-120a-45f3-99ae-d0ad3c02c3eb")
+		(property "Reference" "R1"
+			(at 99.4202 25.8699 0)
+			(effects
+				(font
+					(size 3.48 2.958)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "RC0805FR-07220RLRES_RC0805_YAG"
+			(at 98.9869 33.4899 0)
+			(effects
+				(font
+					(size 3.48 2.958)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:RES_RC0805_YAG"
+			(at 101.6 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "acbc4915-1926-46ba-a804-601f19b58e4b")
+		)
+		(pin "2"
+			(uuid "10a4635d-958a-430f-a4eb-20145f0048ea")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:ESP32-C3_SUPERMINI_TH")
+		(at 129.54 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5197935-06c1-4370-8fc1-7d26813d5b94")
+		(property "Reference" "U1"
+			(at 116.84 103.378 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "ESP32-C3_SUPERMINI_TH"
+			(at 116.84 139.7 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:MODULE_ESP32-C3_SUPERMINI_TH"
+			(at 129.54 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cd13ed8a-13e5-42d7-86d9-de1e214ad09f")
+		)
+		(pin "3.3"
+			(uuid "1c273698-64ff-471b-b09b-3e532dc18a87")
+		)
+		(pin "8"
+			(uuid "317d4f48-7eea-4b31-b099-349878ef8866")
+		)
+		(pin "5"
+			(uuid "fbcda6ec-038d-472b-acb8-e6628557f147")
+		)
+		(pin "5V"
+			(uuid "8f342416-545d-4978-911e-b56193194851")
+		)
+		(pin "7"
+			(uuid "355235b7-811b-4260-93db-b972dbd9ea07")
+		)
+		(pin "0"
+			(uuid "d171ad7f-d645-4c64-b5e9-33d6243c8f73")
+		)
+		(pin "10"
+			(uuid "03c4f5a2-8a4f-4b77-bce4-8ed187cf1bfd")
+		)
+		(pin "6"
+			(uuid "6dc9e6ed-8092-4908-bb0b-b4c3a8d9876a")
+		)
+		(pin "20"
+			(uuid "9fdcaa84-b697-4402-bb95-d3269bd8e728")
+		)
+		(pin "4"
+			(uuid "8032ea16-fab0-4580-abd2-47cf4f701e49")
+		)
+		(pin "3"
+			(uuid "7db973cf-7230-43dd-9ae0-04f956bf94fc")
+		)
+		(pin "9"
+			(uuid "7f6a1b3a-7f2a-4442-bc79-ebcfde912045")
+		)
+		(pin "21"
+			(uuid "37c83d06-fb31-4b5e-abdb-2a7e8b91a562")
+		)
+		(pin "G"
+			(uuid "298d0b98-3322-407e-9357-6fc28a85b060")
+		)
+		(pin "2"
+			(uuid "927d6e9e-5a9a-41fe-aa74-5367488e5a24")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:L135-A589003500000")
+		(at 129.54 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e7c434a2-f2be-4e5d-95c9-c8628b59cebb")
+		(property "Reference" "D1"
+			(at 126.4412 23.4442 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "L135-A589003500000"
+			(at 125.984 31.242 0)
+			(effects
+				(font
+					(size 1.27 1.0795)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "PCBsch:LED_L135-A589003500000"
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "C"
+			(uuid "042420db-fc54-4c73-a4ef-36de2e19fc18")
+		)
+		(pin "A"
+			(uuid "843162ec-7f94-4a8c-b5d9-939a780eadcd")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:SERVOSG90-HDR")
+		(at 203.2 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f7258955-c0b9-4ced-9d90-bd50185cd06e")
+		(property "Reference" "U$2"
+			(at 204.47 131.572 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "SERVOSG90-HDR"
+			(at 204.47 147.828 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "PCBsch:1X03"
+			(at 203.2 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "74cc2c2d-4f2e-4d23-a854-5d35d25dbc4e")
+		)
+		(pin "1"
+			(uuid "01ded90e-6ebd-4665-bcf1-aea61bd2752f")
+		)
+		(pin "3"
+			(uuid "0a37ee26-774f-4a4c-8972-83a0228db3c4")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "U$2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "PCBsch-eagle-import:SERVOSG90-HDR")
+		(at 182.88 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fea2227c-beee-4e89-a3b8-55171c960afc")
+		(property "Reference" "U$3"
+			(at 184.15 169.672 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "SERVOSG90-HDR"
+			(at 184.15 185.928 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "PCBsch:1X03"
+			(at 182.88 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5ce88c89-641d-4d8f-93f8-d841731f2a06")
+		)
+		(pin "3"
+			(uuid "4d404892-f827-4e9f-83e1-c007f537af93")
+		)
+		(pin "1"
+			(uuid "45fd0c6f-b07b-4abb-a501-7b8bbaf124ce")
+		)
+		(instances
+			(project "PCBsch"
+				(path "/5959150c-0b34-4925-92cd-c6f86deba942"
+					(reference "U$3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
