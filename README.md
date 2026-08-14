@@ -14,7 +14,7 @@ It keeps only the essentials:
 - USB-powered
 - LED eyes and heart
 
-The hardware and software are open source and intended to be easy to modify, rebuild, and experiment with.
+Design files are provided as-is. Feel free to build on them, modify them, or just poke around.
 
 ## Hardware
 
