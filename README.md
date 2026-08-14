@@ -145,7 +145,7 @@ See `LICENSE-HARDWARE` for details.
 
 ### Software
 
-Firmware and software are licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
+Firmware and software are licensed under the **MIT License**.
 
 Commercial use and modification are allowed under the terms of the license.
 
