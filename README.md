@@ -122,6 +122,13 @@ Firmware is provided in the `firmware/` directory.
 
 Feel free to modify it, add new behaviors, or use BEN as a platform for your own desktop robotics experiments.
 
+## Building guide
+
+A step-by-step build guide, including fabrication, assembly, wiring, and setup, is available on Instructables:
+
+**[Build BEN on Instructables](YOUR_INSTRUCTABLES_LINK)**
+
+
 ## Third-Party Resources
 
 The electronics design uses the following third-party resources:
