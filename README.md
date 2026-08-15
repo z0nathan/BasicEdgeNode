@@ -157,10 +157,6 @@ Commercial use and modification are allowed under the terms of the license.
 
 See `LICENSE-SOFTWARE` for details.
 
-## Acknowledgements
-
-Special thanks to **JLCPCB** for helping with the FPCB fabrication.
-
 ---
 
 **BEN — Basic Embodied Node**
