@@ -1,4 +1,4 @@
-# BEN — Edge Node
+# BEN — Basic Edge Node
 
 **A minimal desktop companion robotics platform.**
 
