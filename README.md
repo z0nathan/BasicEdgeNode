@@ -72,26 +72,6 @@ The mechanism was designed to minimize the number of actuators and mechanical co
 
 STEP files are provided for modification and fabrication.
 
-## Repository Structure
-
-```text
-BasicEdgeNode/
-├── README.md
-├── LICENSE-HARDWARE
-├── LICENSE-SOFTWARE
-│
-├── hardware/
-│   ├── CAD/
-│   │   └── *.step
-│   │
-│   └── electronics/
-│       ├── BEN.kicad_pro
-│       ├── BEN.kicad_sch
-│       └── BEN.kicad_pcb
-│
-└── firmware/
-```
-
 ## Building BEN
 
 ### Electronics
