@@ -82,13 +82,12 @@ Open:
 hardware/electronics/BEN.kicad_pro
 ```
 
-with **KiCad 9 or later** to inspect or modify the FPCB.
 
 The provided `.kicad_sch` and `.kicad_pcb` files contain the editable schematic and PCB design.
 
 ### Mechanical Parts
 
-STEP files are provided under:
+STEP file is provided under:
 
 ```text
 hardware/CAD/
