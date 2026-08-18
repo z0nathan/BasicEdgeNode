@@ -98,7 +98,13 @@ They can be modified in most CAD software or used to generate files for 3D print
 
 ### Firmware
 
-Firmware is provided in the `firmware/` directory.
+The original button-triggered hardware test is provided as a standalone
+ESP-IDF project in [`firmware/examples/internalTest/`](firmware/examples/internalTest/). Its local README contains
+build, flash, and legacy test-pin instructions.
+
+The [`firmware/examples/webCamMotion/`](firmware/examples/webCamMotion/)
+example follows webcam head pitch and roll while laptop audio controls eye
+brightness.
 
 Feel free to modify it, add new behaviors, or use BEN as a platform for your own desktop robotics experiments.
 
@@ -110,10 +116,17 @@ A step-by-step build guide, including fabrication, assembly, wiring, and setup, 
 
 ## Third-Party Resources
 
-The electronics design uses the following third-party resources:
+The project uses the following third-party resources:
 
 * **Kailh Choc switch footprint** — [KiSwitch](https://github.com/kiswitch/kiswitch/tree/main/library/footprints/Switch_Keyboard_Kailh.pretty)
 * **ESP32-C3 SuperMini symbol/footprint** — [SnapMagic / SnapEDA](https://www.snapeda.com/parts/ESP32-C3%20SuperMini_TH/Espressif%20Systems/view-part/)
+* **ESP-IDF** — [Espressif IoT Development Framework](https://github.com/espressif/esp-idf), used to build the example firmware and distributed under the Apache License 2.0.
+* **MediaPipe** — [Google MediaPipe](https://github.com/google-ai-edge/mediapipe), used for webcam face landmarks under the Apache License 2.0.
+* **OpenCV** — [OpenCV](https://opencv.org/), used for camera capture and head-pose geometry under the Apache License 2.0.
+* **NumPy** — [NumPy](https://numpy.org/), used for pose and audio calculations in the webcam bridge.
+* **SoundCard** — [SoundCard](https://github.com/bastibe/SoundCard), used to capture laptop output or microphone audio.
+* **pySerial** — [pySerial](https://github.com/pyserial/pyserial), used for the laptop-to-ESP32 connection.
+* **pynput** — [pynput](https://github.com/moses-palmer/pynput), used to convert the physical switch event into a Space key press.
 
 These resources remain subject to their respective original licenses and terms.
 
