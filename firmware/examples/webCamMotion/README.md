@@ -8,12 +8,11 @@ all behavior:
 - laptop output audio or microphone magnitude controls both eye LEDs (0–15);
 - the bridge sends heart LED brightness, eye brightness, servo targets, and
   servo attach state to the ESP32-C3;
-- the ESP32-C3 reports a GPIO10 switch press as a Space key on the laptop;
+- the ESP32-C3 reports a GPIO6 switch press as a Space key on the laptop;
 - a one-second serial timeout turns LEDs off and detaches both servos.
 
-The retained legacy wiring is GPIO 1/0/3 for the three LEDs, GPIO 4/5 for the
-servos, and GPIO10 for the switch. Confirm the pinout before flashing a
-different hardware revision.
+The wiring matches the main BEN pinout: eye LEDs on GPIO0/1, heart LED on
+GPIO2, servos on GPIO4/5, and the switch on GPIO6.
 
 ## Build and flash the follower
 
