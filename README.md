@@ -39,11 +39,11 @@ The button on top of the head acts as BEN's primary physical input.
 
 | Function             | ESP32-C3        |
 | -------------------- | --------------- |
-| Left / Right Eye LED | GPIO 0 / GPIO 1 |
-| Heart LED            | GPIO 2          |
+| Left / Right Eye LED | GPIO 0 / GPIO 3 |
+| Heart LED            | GPIO 1          |
 | Servo 1              | GPIO 4          |
 | Servo 2              | GPIO 5          |
-| Head Button          | GPIO 6          |
+| Head Button          | GPIO 10         |
 | Servo Power          | 5 V             |
 | Logic Power          | 3.3 V           |
 | Common Ground        | GND             |

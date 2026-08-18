@@ -29,17 +29,9 @@ SERVO2_CENTER = (SERVO2_MIN + SERVO2_MAX) / 2.0
 
 # MediaPipe Face Mesh indices: nose, chin, eye corners, mouth corners.
 POSE_INDICES = (1, 152, 33, 263, 61, 291)
-MODEL_POINTS = np.array(
-    [
-        (0.0, 0.0, 0.0),
-        (0.0, -63.6, -12.5),
-        (-43.3, 32.7, -26.0),
-        (43.3, 32.7, -26.0),
-        (-28.9, -28.9, -24.1),
-        (28.9, -28.9, -24.1),
-    ],
-    dtype=np.float64,
-)
+NOSE_INDEX = 1
+LEFT_EYE_INDEX = 33
+RIGHT_EYE_INDEX = 263
 
 
 def clamp(value, minimum, maximum):
@@ -137,7 +129,9 @@ class WebcamBridge:
                     )
                     rms = float(np.sqrt(np.mean(samples * samples)))
                     magnitude = clamp(rms * self.args.audio_gain, 0.0, 1.0)
-                    target = math.sqrt(magnitude) * self.args.eye_max
+                    target = self.args.eye_min + math.sqrt(magnitude) * (
+                        self.args.eye_max - self.args.eye_min
+                    )
                     alpha = 0.30 if target > smoothed else 0.10
                     smoothed += (target - smoothed) * alpha
                     with self.state_lock:
@@ -154,34 +148,47 @@ class WebcamBridge:
         print("Look naturally at the camera; recalibrating neutral pose.")
 
     def estimate_pose(self, landmarks, width, height):
-        image_points = np.array(
-            [
-                (landmarks[index].x * width, landmarks[index].y * height)
-                for index in POSE_INDICES
-            ],
+        left_eye = np.array(
+            (
+                landmarks[LEFT_EYE_INDEX].x * width,
+                landmarks[LEFT_EYE_INDEX].y * height,
+            ),
             dtype=np.float64,
         )
-        focal_length = float(width)
-        camera_matrix = np.array(
-            [
-                (focal_length, 0.0, width / 2.0),
-                (0.0, focal_length, height / 2.0),
-                (0.0, 0.0, 1.0),
-            ],
+        right_eye = np.array(
+            (
+                landmarks[RIGHT_EYE_INDEX].x * width,
+                landmarks[RIGHT_EYE_INDEX].y * height,
+            ),
             dtype=np.float64,
         )
-        success, rotation_vector, _ = cv2.solvePnP(
-            MODEL_POINTS,
-            image_points,
-            camera_matrix,
-            np.zeros((4, 1), dtype=np.float64),
-            flags=cv2.SOLVEPNP_ITERATIVE,
+        nose = np.array(
+            (
+                landmarks[NOSE_INDEX].x * width,
+                landmarks[NOSE_INDEX].y * height,
+            ),
+            dtype=np.float64,
         )
-        if not success:
+        eye_vector = right_eye - left_eye
+        eye_distance = float(np.linalg.norm(eye_vector))
+        if eye_distance < 1.0:
             return None
-        rotation_matrix, _ = cv2.Rodrigues(rotation_vector)
-        pitch, _, roll = cv2.RQDecomp3x3(rotation_matrix)[0]
-        return float(pitch), float(roll)
+
+        # Roll is the inclination of the line joining the two outer eye points.
+        roll = math.degrees(math.atan2(eye_vector[1], eye_vector[0]))
+
+        # Pitch is the nose's signed perpendicular distance from the eye line,
+        # normalized by eye spacing and expressed as a geometric angle.
+        nose_vector = nose - left_eye
+        perpendicular_distance = (
+            eye_vector[0] * nose_vector[1]
+            - eye_vector[1] * nose_vector[0]
+        ) / eye_distance
+        pitch = math.degrees(
+            math.atan2(perpendicular_distance, eye_distance)
+        )
+        # Image Y grows downward, so reverse pitch for intuitive head motion.
+        return -pitch, roll
 
     def pose_to_servos(self, pitch, roll):
         pitch_delta = pitch - self.neutral_pitch
@@ -198,9 +205,13 @@ class WebcamBridge:
             roll_delta / self.args.roll_limit_degrees, -1.0, 1.0
         )
 
-        # Pitch drives the servos oppositely; roll drives them together.
-        servo1 = SERVO1_CENTER + pitch_normalized * 15.0 + roll_normalized * 7.5
-        servo2 = SERVO2_CENTER - pitch_normalized * 13.0 + roll_normalized * 7.0
+        # Mechanical axis mixing verified on the assembled neck:
+        #   roll  = common-mode motion (both servos in the same direction)
+        #   pitch = differential motion (servos in opposite directions)
+        pitch_motion = pitch_normalized * self.args.servo_pitch_travel
+        roll_motion = roll_normalized * self.args.servo_roll_travel
+        servo1 = SERVO1_CENTER + roll_motion + pitch_motion
+        servo2 = SERVO2_CENTER + roll_motion - pitch_motion
         return (
             clamp(servo1, SERVO1_MIN, SERVO1_MAX),
             clamp(servo2, SERVO2_MIN, SERVO2_MAX),
@@ -239,6 +250,10 @@ class WebcamBridge:
                 height, width = frame.shape[:2]
                 result = face_mesh.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                 face_found = bool(result.multi_face_landmarks)
+                face_landmarks = (
+                    result.multi_face_landmarks[0].landmark
+                    if face_found else None
+                )
                 now = time.monotonic()
                 servo1 = self.last_servo1
                 servo2 = self.last_servo2
@@ -247,7 +262,7 @@ class WebcamBridge:
 
                 if face_found:
                     pose = self.estimate_pose(
-                        result.multi_face_landmarks[0].landmark, width, height
+                        face_landmarks, width, height
                     )
                     if pose is not None:
                         pitch, roll = pose
@@ -293,10 +308,70 @@ class WebcamBridge:
                 )
 
                 if self.args.preview:
+                    if face_landmarks is not None:
+                        for index in POSE_INDICES:
+                            point = face_landmarks[index]
+                            position = (
+                                int(point.x * width), int(point.y * height)
+                            )
+                            cv2.circle(frame, position, 5, (0, 255, 255), -1)
+
+                        left_eye = np.array(
+                            (
+                                face_landmarks[LEFT_EYE_INDEX].x * width,
+                                face_landmarks[LEFT_EYE_INDEX].y * height,
+                            )
+                        )
+                        right_eye = np.array(
+                            (
+                                face_landmarks[RIGHT_EYE_INDEX].x * width,
+                                face_landmarks[RIGHT_EYE_INDEX].y * height,
+                            )
+                        )
+                        nose_xy = np.array(
+                            (
+                                face_landmarks[NOSE_INDEX].x * width,
+                                face_landmarks[NOSE_INDEX].y * height,
+                            )
+                        )
+                        eye_vector = right_eye - left_eye
+                        eye_length_squared = float(np.dot(eye_vector, eye_vector))
+                        projection = left_eye
+                        if eye_length_squared > 1.0:
+                            amount = float(
+                                np.dot(nose_xy - left_eye, eye_vector)
+                                / eye_length_squared
+                            )
+                            projection = left_eye + eye_vector * amount
+                        cv2.line(
+                            frame, tuple(left_eye.astype(int)),
+                            tuple(right_eye.astype(int)), (0, 255, 0), 2
+                        )
+                        cv2.line(
+                            frame, tuple(projection.astype(int)),
+                            tuple(nose_xy.astype(int)), (255, 0, 255), 2
+                        )
+
+                        nose = face_landmarks[1]
+                        nose_point = (
+                            int(nose.x * width), int(nose.y * height)
+                        )
+                        arrow_end = (
+                            int(nose_point[0] + roll_delta * 4.0),
+                            int(nose_point[1] + pitch_delta * 4.0),
+                        )
+                        cv2.arrowedLine(
+                            frame, nose_point, arrow_end, (255, 100, 0), 3,
+                            tipLength=0.22
+                        )
+
                     status = (
                         f"calibrating {self.calibration_remaining}"
                         if self.calibration_remaining > 0
-                        else f"pitch {pitch_delta:+.1f} roll {roll_delta:+.1f}"
+                        else (
+                            f"pitch {pitch_delta:+.1f} deg  "
+                            f"roll {roll_delta:+.1f} deg"
+                        )
                     )
                     cv2.putText(
                         frame, status, (20, 35), cv2.FONT_HERSHEY_SIMPLEX,
@@ -306,6 +381,12 @@ class WebcamBridge:
                         frame, f"servo {servo1:.0f}, {servo2:.0f} eye {eye:.0f}",
                         (20, 70), cv2.FONT_HERSHEY_SIMPLEX, 0.7,
                         (255, 255, 255), 2
+                    )
+                    cv2.putText(
+                        frame,
+                        "FACE TRACKING" if attach else "NO FACE / DETACHED",
+                        (20, 105), cv2.FONT_HERSHEY_SIMPLEX, 0.65,
+                        (0, 255, 0) if attach else (0, 0, 255), 2
                     )
                     cv2.imshow("BEN webcam motion", frame)
                     key = cv2.waitKey(1) & 0xFF
@@ -341,10 +422,13 @@ def parse_args():
         default="output"
     )
     parser.add_argument("--audio-gain", type=float, default=12.0)
+    parser.add_argument("--eye-min", type=float, default=5.0)
     parser.add_argument("--eye-max", type=float, default=15.0)
     parser.add_argument("--heart-brightness", type=float, default=5.0)
-    parser.add_argument("--pitch-limit-degrees", type=float, default=20.0)
-    parser.add_argument("--roll-limit-degrees", type=float, default=20.0)
+    parser.add_argument("--pitch-limit-degrees", type=float, default=10.0)
+    parser.add_argument("--roll-limit-degrees", type=float, default=10.0)
+    parser.add_argument("--servo-pitch-travel", type=float, default=18.0)
+    parser.add_argument("--servo-roll-travel", type=float, default=18.0)
     parser.add_argument("--pose-smoothing", type=float, default=0.18)
     parser.add_argument("--calibration-frames", type=int, default=30)
     parser.add_argument("--face-hold-seconds", type=float, default=0.5)

@@ -11,12 +11,12 @@
 #include "freertos/task.h"
 
 // The laptop owns all behavior. This firmware only follows safe targets.
-#define LED1_PIN   GPIO_NUM_2
+#define LED1_PIN   GPIO_NUM_1
 #define LED2_PIN   GPIO_NUM_0
-#define LED3_PIN   GPIO_NUM_1
+#define LED3_PIN   GPIO_NUM_3
 #define SERVO1_PIN GPIO_NUM_4
 #define SERVO2_PIN GPIO_NUM_5
-#define SWITCH_PIN GPIO_NUM_6
+#define SWITCH_PIN GPIO_NUM_10
 
 #define LED_PWM_FREQUENCY 5000
 

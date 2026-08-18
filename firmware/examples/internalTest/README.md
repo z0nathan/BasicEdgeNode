@@ -24,9 +24,9 @@ the correct COM port when building on Windows.
 
 | Function | GPIO |
 | --- | ---: |
-| Eye LEDs | 0, 1 |
-| Heart LED | 2 |
+| Eye LEDs | 0, 3 |
+| Heart LED | 1 |
 | Servos | 4, 5 |
-| Switch | 6 |
+| Switch | 10 |
 
 This matches the BEN hardware pinout in the repository's main README.

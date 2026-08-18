@@ -5,14 +5,16 @@ all behavior:
 
 - MediaPipe Face Mesh estimates a person's webcam head pitch and roll;
 - pitch and roll are smoothed and mapped into the safe servo ranges;
-- laptop output audio or microphone magnitude controls both eye LEDs (0–15);
+- roll uses common-mode motion (both servos move in the same direction), while
+  pitch uses differential motion (the servos move oppositely);
+- laptop output audio or microphone magnitude controls both eye LEDs (5–15);
 - the bridge sends heart LED brightness, eye brightness, servo targets, and
   servo attach state to the ESP32-C3;
-- the ESP32-C3 reports a GPIO6 switch press as a Space key on the laptop;
+- the ESP32-C3 reports a GPIO10 switch press as a Space key on the laptop;
 - a one-second serial timeout turns LEDs off and detaches both servos.
 
-The wiring matches the main BEN pinout: eye LEDs on GPIO0/1, heart LED on
-GPIO2, servos on GPIO4/5, and the switch on GPIO6.
+The wiring matches the BEN PCB: eye LEDs on GPIO0/3, heart LED on GPIO1,
+servos on GPIO4/5, and the switch on GPIO10.
 
 ## Build and flash the follower
 
@@ -49,7 +51,10 @@ py webcam_bridge.py --port COM5
 ```
 
 Look naturally toward the camera during the first 30 frames. In the preview,
-press `C` to recalibrate and `Q` or Escape to quit.
+yellow dots mark the pose landmarks, the nose arrow shows pitch/roll direction,
+the green eye line determines roll, and the magenta perpendicular from the eye
+line to the nose determines pitch. Calibrated angles are shown in degrees.
+Press `C` to recalibrate and `Q` or Escape to quit.
 
 By default, laptop output audio drives the eyes. To use a microphone:
 
@@ -61,8 +66,10 @@ Useful adjustments:
 
 ```bash
 python webcam_bridge.py \
-  --pitch-limit-degrees 15 \
-  --roll-limit-degrees 15 \
+  --pitch-limit-degrees 10 \
+  --roll-limit-degrees 10 \
+  --servo-pitch-travel 18 \
+  --servo-roll-travel 18 \
   --pose-smoothing 0.18 \
   --audio-gain 12
 ```
