@@ -19,14 +19,3 @@ idf.py -p /dev/ttyACM0 flash monitor
 
 Close any other serial monitor before flashing. Replace the serial port with
 the correct COM port when building on Windows.
-
-## Pin assignment
-
-| Function | GPIO |
-| --- | ---: |
-| Eye LEDs | 0, 3 |
-| Heart LED | 1 |
-| Servos | 4, 5 |
-| Switch | 10 |
-
-This matches the BEN hardware pinout in the repository's main README.
