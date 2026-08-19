@@ -1,5 +1,8 @@
 # Webcam motion bridge
 
+<img width="1178" height="673" alt="KakaoTalk_20260819_121949584" src="https://github.com/user-attachments/assets/9ac4e5e2-1a74-416c-a713-8dd11558bad3" />
+
+
 This example makes the ESP32-C3 a hardware follower. The laptop bridge owns
 all behavior:
 
