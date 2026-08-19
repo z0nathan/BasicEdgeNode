@@ -16,8 +16,6 @@ all behavior:
 - the ESP32-C3 reports a GPIO10 switch press as a Space key on the laptop;
 - a one-second serial timeout turns LEDs off and detaches both servos.
 
-The wiring matches the BEN PCB: eye LEDs on GPIO0/3, heart LED on GPIO1,
-servos on GPIO4/5, and the switch on GPIO10.
 
 ## Build and flash the follower
 
