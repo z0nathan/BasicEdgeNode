@@ -26,7 +26,7 @@ BEN is built around an **ESP32-C3 SuperMini** and a custom flexible PCB (FPCB).
 | Degrees of freedom | 2 DOF (roll&pitch)                           |
 | Actuators          | 2 × DM-S0020 2g micro servo      |
 | Input              | 1 × Kailh Choc V2 mechanical switch |
-| LEDs | 3 × LUXEON 3535L LED3 × LUXEON 3535L LED |
+| LEDs | 3 × LUXEON 3535L LED    |
 | Power              | 5 V USB C                         |
 | PCB                | Custom FPCB                      |
 | Mechanical parts   | 3D printed                       |
@@ -153,6 +153,10 @@ See `LICENSE-SOFTWARE` for details.
 
 ---
 
-**BEN — Basic Embodied Node**
+## Community
 
-Minimal hardware. Open design. Have fun with it.
+Built something with BEN?
+
+If you modify the hardware, develop a new behavior, or use BEN in another project, I'd love to see what you come up with.
+
+Feel free to open an issue, submit a pull request, or share your build. Interesting modifications and projects may be featured here in the future.
