@@ -113,6 +113,7 @@ Feel free to modify it, add new behaviors, or use BEN as a platform for your own
 ## Building guide
 
 A step-by-step build guide, including fabrication, assembly, wiring, and setup, is available on Instructables:
+ [Instructables](https://www.instructables.com/BEN-Your-Minimal-Desktop-Companion/)
 
 
 ## Third-Party Resources
