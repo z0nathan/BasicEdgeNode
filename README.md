@@ -87,6 +87,8 @@ The provided `.kicad_sch` and `.kicad_pcb` files contain the editable schematic 
 
 ### Mechanical Parts
 
+<img width="364" height="247" alt="image" src="https://github.com/user-attachments/assets/2ebf729a-954a-4144-a94d-066f79d7be8b" />
+
 STEP file is provided under:
 
 ```text
