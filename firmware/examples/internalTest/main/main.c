@@ -1,3 +1,8 @@
+// BEN - Basic Edge Node
+// minimal desktop robot platform for everyone.
+// 
+// 
+// 
 // Copyright (c) 2026 Minjae Kim
 //
 // See LICENSE for the full MIT License text.
