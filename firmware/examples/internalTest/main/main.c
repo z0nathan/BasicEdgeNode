@@ -1,3 +1,8 @@
+// Copyright (c) 2026 Minjae Kim
+//
+// See LICENSE for the full MIT License text.
+
+
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
