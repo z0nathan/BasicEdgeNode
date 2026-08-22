@@ -1,3 +1,14 @@
+## BEN - Basic Edge Node
+## minimal desktop robot platform for everyone.
+## 
+## 
+## 
+## Copyright (c) 2026 Minjae Kim
+##
+## See LICENSE for the full MIT License text.
+
+
+
 #!/usr/bin/env python3
 """Webcam head-pose and audio LED bridge for the BEN ESP32-C3 follower."""
 
