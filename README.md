@@ -1,5 +1,51 @@
 # BEN — Basic Edge Node
 
+> **This is [slightly-engineered](https://github.com/slightly-engineered)'s fork of [z0nathan/BasicEdgeNode](https://github.com/z0nathan/BasicEdgeNode).**
+> It builds BEN with two **RoBoHoN (Sharp SR01M) elbow actuators** (Orbray BLDC serial-bus servos)
+> instead of the DM-S0020 PWM micro servos. Everything RoBoHoN-specific is listed below; the
+> upstream PWM examples are left as they are and are not part of this fork's build.
+
+## This fork: BEN with RoBoHoN actuators
+
+<img width="360" alt="BEN neck, viewed from the back, with left and right servo sides labelled" src="hardware/robohon-variant/servo-sides-back-view.png" />
+
+*Viewed from the back of the robot. Left and right in all of this fork's notes mean as seen in this photo.*
+
+| Change from upstream | Details | Files |
+|---|---|---|
+| **Actuators** | Two RoBoHoN elbow actuators on RoBoHoN's serial bus (115200 baud, 3.7 V) | [`firmware/examples/webCamMotionRobohon/`](firmware/examples/webCamMotionRobohon/) |
+| **Neck brackets** | The ball on the neck side of each bracket is scaled to **90%**. At full size it was too tight in the neck socket: too much friction, and brackets snapped. These were printed in resin, which likely holds tighter tolerances than FDM/PLA. | [`hardware/robohon-variant/`](hardware/robohon-variant/) |
+| **Eyes** | Two **5 mm through-hole LEDs** instead of the FPCB's surface-mount LEDs. The neck has two slots for them. | `neck.stl`, `5mmLED_v2.stl` |
+| **Head button** | The Kailh Choc switch is **removed**. The neck is modified so the head clips straight on. | `neck.stl` |
+
+### Wiring at a glance
+
+| Side (viewed from the back) | Actuator | Bus ID |
+|---|---|---|
+| **Left** | RoBoHoN **left elbow** | SID 4 |
+| **Right** | RoBoHoN **right elbow** | SID 5 |
+
+The firmware sends the same bus frames on **GPIO 4 and GPIO 5**, so either actuator's data
+wire can go to either servo pad. Each actuator only obeys its own ID: what matters is that
+the **left elbow actuator is on the left** and the **right elbow actuator is on the right**.
+Power the actuators from a 1S Li-ion/LiPo (3.7 V), not BEN's 5 V pad, with the battery
+negative tied to BEN's GND.
+
+### Upload and test
+
+1. Build and flash [`firmware/examples/webCamMotionRobohon/`](firmware/examples/webCamMotionRobohon/) with ESP-IDF 5.3 or newer.
+2. With the arms or links off, hold both actuators at home:
+   `python webcam_bridge.py --port <your COM port> --home-only` (run from `firmware/examples/webCamMotion/`).
+   Fit both arms vertical, then press Ctrl+C to release.
+3. Run the bridge normally and look straight at the camera. Both arms should rotate about
+   20 degrees **outward**, away from each other. If one rotates inward, flip that side's
+   `LEFT_DIR` / `RIGHT_DIR` in `main/main.c` and rebuild.
+
+Full details: [`firmware/examples/webCamMotionRobohon/README.md`](firmware/examples/webCamMotionRobohon/README.md).
+
+---
+
+
 **A minimal desktop companion robotics platform.**
 
 <img width="763" height="870" alt="KakaoTalk_20260815_001912404" src="https://github.com/user-attachments/assets/c1ed3716-c423-47f7-a8aa-0f5b8f87f93d" />

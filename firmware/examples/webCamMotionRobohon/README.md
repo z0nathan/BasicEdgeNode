@@ -10,6 +10,8 @@ exactly as described there. The bridge still sends BEN's servo angles
 angle into a RoBoHoN raw position and sends Sharp head/elbow-bus frames
 instead of 50 Hz PWM.
 
+<img width="360" alt="BEN neck viewed from the back, left and right labelled" src="../../../hardware/robohon-variant/servo-sides-back-view.png" />
+
 ## Servo assignment (viewed from the back of the robot)
 
 | Side  | RoBoHoN servo | Head-bus SID | Bridge servo | Home (raw) |
@@ -62,12 +64,15 @@ On Windows, use the ESP-IDF PowerShell and the board's COM port instead of
 
 ## Fitting the arms (home)
 
-Either of these holds both servos at home so the arms can be fitted
-vertical:
+Run the bridge with `--home-only` (from `../webCamMotion`). Both actuators hold
+home (left raw 1565, right raw -1256) until you press Ctrl+C. Fit both arms
+vertical while they hold.
 
-- With the bridge **not** running, press BEN's head button. The heart LED
-  lights and both servos hold home. Press it again to relax.
-- Run the bridge with `--home-only`. Press Ctrl+C to release.
+If your build still has the head button, pressing it while the bridge is
+**not** running also toggles the home hold (the heart LED lights while held).
+
+There is no Serial Monitor test mode: the USB serial port is used by the
+bridge. Close any Serial Monitor before running the bridge.
 
 ## Run
 
