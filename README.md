@@ -107,6 +107,10 @@ The [`firmware/examples/webCamMotion/`](firmware/examples/webCamMotion/)
 example follows webcam head pitch and roll while laptop audio controls eye
 brightness.
 
+The [`firmware/examples/webCamMotionRobohon/`](firmware/examples/webCamMotionRobohon/)
+example runs the same webcam bridge with two RoBoHoN elbow bus servos in place
+of the DM-S0020 micro servos.
+
 Feel free to modify it, add new behaviors, or use BEN as a platform for your own desktop robotics experiments.
 
 

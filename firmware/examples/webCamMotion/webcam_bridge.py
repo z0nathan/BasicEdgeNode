@@ -36,6 +36,8 @@ SERVO1_MAX = 135
 SERVO2_MIN = 50
 SERVO2_MAX = 90
 SERVO1_CENTER = (SERVO1_MIN + SERVO1_MAX) / 2.0
+SERVO_HOME = 90  # BEN home: servo 1 minimum / servo 2 maximum
+HOME_PACKET_INTERVAL = 0.02
 SERVO2_CENTER = (SERVO2_MIN + SERVO2_MAX) / 2.0
 
 # MediaPipe Face Mesh indices: nose, chin, eye corners, mouth corners.
@@ -116,6 +118,14 @@ class WebcamBridge:
     def capture_audio(self):
         if self.args.audio_source == "off":
             return
+        # Windows: COM must be initialized in every thread that uses the
+        # soundcard (WASAPI) backend, otherwise capture fails with 0x800401f0.
+        com_initialized = False
+        if sys.platform == "win32":
+            import ctypes
+            # COINIT_MULTITHREADED = 0x0; S_OK = 0, S_FALSE = 1 (already initialized)
+            hr = ctypes.windll.ole32.CoInitializeEx(None, 0x0)
+            com_initialized = hr in (0, 1)
         try:
             if self.args.audio_source == "microphone":
                 source = sc.default_microphone()
@@ -151,6 +161,10 @@ class WebcamBridge:
             print(f"Audio capture disabled: {error}", file=sys.stderr)
             with self.state_lock:
                 self.eye_brightness = 0.0
+        finally:
+            if com_initialized:
+                import ctypes
+                ctypes.windll.ole32.CoUninitialize()
 
     def reset_calibration(self):
         self.calibration_pitch.clear()
@@ -230,7 +244,37 @@ class WebcamBridge:
             roll_delta,
         )
 
+    def hold_home(self, seconds=None):
+        """Hold both servos at home (90/90). seconds=None holds until Ctrl+C."""
+        if seconds is None:
+            print("Holding home (90/90). Press Ctrl+C to release.")
+        else:
+            print(f"Holding home (90/90) for {seconds:.1f} s.")
+        end = None if seconds is None else time.monotonic() + seconds
+        try:
+            while end is None or time.monotonic() < end:
+                self.send_packet(
+                    SERVO_HOME, SERVO_HOME, self.args.heart_brightness, 0, True
+                )
+                time.sleep(HOME_PACKET_INTERVAL)
+        except KeyboardInterrupt:
+            pass
+
+    def home_only(self):
+        try:
+            self.hold_home(None)
+        finally:
+            try:
+                self.send_packet(SERVO_HOME, SERVO_HOME, 0, 0, False)
+            except serial.SerialException:
+                pass
+            self.serial.close()
+            print("Released.")
+
     def run(self):
+        if self.args.home_seconds > 0:
+            self.hold_home(self.args.home_seconds)
+
         reader = threading.Thread(target=self.read_switch_events, daemon=True)
         audio = threading.Thread(target=self.capture_audio, daemon=True)
         reader.start()
@@ -446,6 +490,14 @@ def parse_args():
     parser.add_argument("--invert-pitch", action="store_true")
     parser.add_argument("--invert-roll", action="store_true")
     parser.add_argument(
+        "--home-seconds", type=float, default=3.0,
+        help="hold both servos at home (90/90) this long at startup; 0 skips"
+    )
+    parser.add_argument(
+        "--home-only", action="store_true",
+        help="hold both servos at home until Ctrl+C, then exit (no camera)"
+    )
+    parser.add_argument(
         "--no-preview", dest="preview", action="store_false"
     )
     parser.set_defaults(preview=True)
@@ -459,7 +511,11 @@ def main():
         print("No Espressif serial port found; use --port.", file=sys.stderr)
         return 1
     try:
-        WebcamBridge(args, port).run()
+        bridge = WebcamBridge(args, port)
+        if args.home_only:
+            bridge.home_only()
+        else:
+            bridge.run()
     except (serial.SerialException, RuntimeError) as error:
         print(error, file=sys.stderr)
         return 1

@@ -56,7 +56,11 @@
 
 static void sleep_ms(uint32_t ms)
 {
-    vTaskDelay(pdMS_TO_TICKS(ms));
+    // Always block for at least one tick. At CONFIG_FREERTOS_HZ=100,
+    // pdMS_TO_TICKS(5) is 0, which starves the IDLE task and trips the
+    // task watchdog.
+    TickType_t ticks = pdMS_TO_TICKS(ms);
+    vTaskDelay(ticks > 0 ? ticks : 1);
 }
 
 static uint64_t millis_now(void)
