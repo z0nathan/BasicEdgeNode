@@ -77,3 +77,20 @@ python webcam_bridge.py \
 
 Smaller pitch/roll limits produce more servo travel for the same human head
 movement. Use `--invert-pitch` or `--invert-roll` if an axis follows backward.
+
+At startup the bridge holds both servos at home (90/90) for 3 seconds before
+opening the camera. Change this with `--home-seconds 5`, or skip it with
+`--home-seconds 0`.
+
+To hold both servos at home without starting the camera (for example, while
+fitting the servo arms), run:
+
+```bash
+python webcam_bridge.py --port /dev/ttyACM0 --home-only
+```
+
+Press Ctrl+C to release the servos and exit.
+
+Windows note: the audio thread initialises COM itself, so laptop audio and
+microphone capture work on Windows (previously this failed with
+`0x800401f0`).
