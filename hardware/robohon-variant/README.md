@@ -1,7 +1,7 @@
 # RoBoHoN variant: printed parts
 
-Parts changed for this fork's RoBoHoN-actuator build. Everything else prints
-from the upstream design in [`../Design/BEN_assembled.step`](../Design/BEN_assembled.step).
+Parts changed for the RoBoHoN-actuator build. Everything else prints
+from the standard design in [`../Design/BEN_assembled.step`](../Design/BEN_assembled.step).
 
 | File | What changed |
 |---|---|

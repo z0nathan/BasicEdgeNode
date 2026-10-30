@@ -1,17 +1,17 @@
 # BEN — Basic Edge Node
 
-> **This is [slightly-engineered](https://github.com/slightly-engineered)'s fork of [z0nathan/BasicEdgeNode](https://github.com/z0nathan/BasicEdgeNode).**
-> It builds BEN with two **RoBoHoN (Sharp SR01M) elbow actuators** (Orbray BLDC serial-bus servos)
+> **RoBoHoN actuator variant**, contributed by [@slightly-engineered](https://github.com/slightly-engineered).
+> BEN can also be built with two **RoBoHoN (Sharp SR01M) elbow actuators** (Orbray BLDC serial-bus servos)
 > instead of the DM-S0020 PWM micro servos. Everything RoBoHoN-specific is listed below; the
-> upstream PWM examples are left as they are and are not part of this fork's build.
+> PWM examples are unchanged.
 
-## This fork: BEN with RoBoHoN actuators
+## Variant: BEN with RoBoHoN actuators
 
 <img width="360" alt="BEN neck, viewed from the back, with left and right servo sides labelled" src="hardware/robohon-variant/servo-sides-back-view.png" />
 
-*Viewed from the back of the robot. Left and right in all of this fork's notes mean as seen in this photo.*
+*Viewed from the back of the robot. Left and right in all of this variant's notes mean as seen in this photo.*
 
-| Change from upstream | Details | Files |
+| Change from the standard build | Details | Files |
 |---|---|---|
 | **Actuators** | Two RoBoHoN elbow actuators on RoBoHoN's serial bus (115200 baud, 3.7 V) | [`firmware/examples/webCamMotionRobohon/`](firmware/examples/webCamMotionRobohon/) |
 | **Neck brackets** | The ball on the neck side of each bracket is scaled to **90%**. At full size it was too tight in the neck socket: too much friction, and brackets snapped. These were printed in resin, which likely holds tighter tolerances than FDM/PLA. | [`hardware/robohon-variant/`](hardware/robohon-variant/) |
