@@ -3,6 +3,12 @@
 Parts changed for the RoBoHoN-actuator build. Everything else prints
 from the standard design in [`../Design/BEN_assembled.step`](../Design/BEN_assembled.step).
 
+<p>
+<img width="240" alt="Front of the built BEN with 5 mm LED eyes lit" src="build-front.png" />
+<img width="240" alt="Front of the built BEN, second view" src="build-front-2.png" />
+<img width="240" alt="Back of the built BEN showing the RoBoHoN elbow actuators" src="build-back.png" />
+</p>
+
 | File | What changed |
 |---|---|
 | `neck.stl` | Two slots for 5 mm through-hole LEDs (replaces the FPCB eye LEDs). The Kailh Choc switch mount is removed, so the head clips straight onto the neck. |

@@ -7,6 +7,10 @@
 
 ## Variant: BEN with RoBoHoN actuators
 
+<img width="240" alt="Front of the built BEN with 5 mm LED eyes lit" src="hardware/robohon-variant/build-front.png" />
+<img width="240" alt="Front of the built BEN, second view" src="hardware/robohon-variant/build-front-2.png" />
+<img width="240" alt="Back of the built BEN showing the RoBoHoN elbow actuators" src="hardware/robohon-variant/build-back.png" />
+
 <img width="360" alt="BEN neck, viewed from the back, with left and right servo sides labelled" src="hardware/robohon-variant/servo-sides-back-view.png" />
 
 *Viewed from the back of the robot. Left and right in all of this variant's notes mean as seen in this photo.*
