@@ -163,7 +163,7 @@ A collection of BEN builds and modifications shared by the community.
   <img src="https://github.com/user-attachments/assets/40663ba6-5550-4d0e-ac73-b993a79688d8" width="200" />
   <img src="https://github.com/user-attachments/assets/41c9f863-b309-44e4-89c6-229049da812a" width="200" />
 </p>
-A modified version of BEN featuring 5mm LEDs and RoBoHoN servos, designed and built by [@slightly_engineered](https://www.instagram.com/slightly_engineered/).
+A modified version of BEN featuring 5mm LEDs and RoBoHoN servos, designed and built by [@slightly_engineered]
 
 [Instagram](https://www.instagram.com/slightly_engineered/) · [GitHub](https://github.com/slightly-engineered/BasicEdgeNode-RoBoHoN-servos-5mm-LEDs)
 
