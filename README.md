@@ -1,5 +1,10 @@
 # BEN — Basic Edge Node
 
+## Main Differences
+
+<img width="360" alt="5 mm LED eye slot in the neck" src="hardware/robohon-variant/main-diff-led-eye.png" />
+<img width="360" alt="Neck bracket on the RoBoHoN variant" src="hardware/robohon-variant/main-diff-neck-bracket.png" />
+
 > **RoBoHoN actuator variant**, contributed by [@slightly-engineered](https://github.com/slightly-engineered).
 > BEN can also be built with two **RoBoHoN (Sharp SR01M) elbow actuators** (Orbray BLDC serial-bus servos)
 > instead of the DM-S0020 PWM micro servos. Everything RoBoHoN-specific is listed below; the
