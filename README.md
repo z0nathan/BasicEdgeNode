@@ -154,10 +154,12 @@ See `LICENSE-SOFTWARE` for details.
 
 ---
 
-## Community
+### Community Builds
 
-Built something with BEN?
+A collection of BEN builds and modifications shared by the community.
 
-If you modify the hardware, develop a new behavior, or use BEN in another project, I'd love to see what you come up with.
+#### BEN — 5mm LED Version by @slightly_engineered
 
-Feel free to open an issue, submit a pull request, or share your build. Interesting modifications and projects may be featured here in the future.
+A modified version of BEN featuring 5mm LEDs, designed and built by [@slightly_engineered](INSTAGRAM_URL).
+
+[Instagram](INSTAGRAM_URL) · [GitHub](FORK_URL)
